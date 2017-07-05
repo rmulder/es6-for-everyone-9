@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>let and const real world</title>
 </head>
+
 <body>
-<script>
-  {
-    const name = 'wes';
+  <script>
+    {
+      // scope inside this block
+      const name = 'wes';
+      console.log(name);
+    }
+    // logs window.name
     console.log(name);
-  }
 
-  for(let i = 0; i < 10; i++) {
-    console.log(i);
-    setTimeout(function() {
-      console.log('The number is ' + i);
-    },1000);
-  }
+    // for (var i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+      setTimeout(function () {
+        console.log('The number is ' + i);
+      }, 1000);
+    }
 
-</script>
+  </script>
 </body>
+
 </html>
