@@ -1,6 +1,6 @@
 # es6-for-everyone
 
-Everything you need to Learn ES6
+Wes Bos's ES6 course
 
 ## Credits
 https://es6.io
