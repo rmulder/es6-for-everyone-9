@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Template Strings!</title>
 </head>
-<body>
-<script>
-  const beer = {
-    name: 'Belgian Wit',
-    brewery: 'Steam Whistle Brewery',
-    keywords: ['pale', 'cloudy', 'spiced', 'crisp']
-  };
 
-  function renderKeywords(keywords) {
-    return `
+<body>
+  <script>
+    const beer = {
+      name: 'Belgian Wit',
+      brewery: 'Steam Whistle Brewery',
+      keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+    };
+
+    function renderKeywords(keywords) {
+      return `
       <ul>
-        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+        ${keywords.map((keyword) => {
+
+          return `<li>${keyword}</li>`;
+        })
+          .join('')}
       </ul>
     `;
-  }
+    }
 
-  const markup = `
+    const beerMarkup = `
     <div class="beer">
       <h2>${beer.name}</h2>
       <p class="brewery">${beer.brewery}</p>
@@ -28,8 +34,9 @@
     </div>
   `;
 
-  document.body.innerHTML = markup;
-
-</script>
+    console.log(beerMarkup);
+    document.body.innerHTML = beerMarkup;
+  </script>
 </body>
+
 </html>
