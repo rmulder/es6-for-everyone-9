@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>New String Methods</title>
 </head>
+
 <body>
 
-<script>
-const course = 'RFB2';
-const flightNumber = '20-AC2018-jz';
-const accountNumber = '825242631RT0001';
+  <script>
+    const course = 'RFB2';
+    const flightNumber = '20-AC2018-jz';
+    const accountNumber = '825242631RT0001';
 
-const make = 'BMW';
-const model = 'x5';
-const colour = 'Royal Blue';
+    const make = 'BMW';
+    const model = 'x5';
+    const colour = 'Royal Blue';
 
-// .startsWith()
+    // NOTES string methods are case-sensitive
+    if (course.startsWith('RF')) {
+      console.log('course\'s string starts with RF');
+    }
 
-// .endsWith()
+    if (course.startsWith('B2', 2)) {
+      console.log('course\'s string starts with B2 with offset of 2');
+    }
 
-// .includes()
+    if (flightNumber.endsWith('jz')) {
+      console.log('flight number ends with jz');
+    }
 
-// .repeat()
+    if (accountNumber.endsWith('RT', 11)) {
+      console.log('account number ends with RT with offset of 11');
+    }
 
-function leftPad(str, length = 20) {
-  return `→ ${' '.repeat(length - str.length)}${str}`;
-}
+    if (flightNumber.includes('AC')) {
+      console.log('flight number includes AC');
+    }
 
-console.log(leftPad(make));
-console.log(leftPad(model));
-console.log(leftPad(colour));
+    // .repeat()
 
+    function leftPad(str, length = 20) {
+      return `→ ${' '.repeat(length - str.length)}${str}`;
+    }
 
-</script>
+    console.log(leftPad(make));
+    console.log(leftPad(model));
+    console.log(leftPad(colour));
+  </script>
 
 </body>
+
 </html>
