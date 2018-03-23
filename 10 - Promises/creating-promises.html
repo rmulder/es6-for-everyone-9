@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Creating Promises!</title>
 </head>
-<body>
-<script>
-  const p = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
-    }, 1000);
-  });
 
-  p
-    .then(data => {
-      console.log(data);
-    })
-    .catch(err => {
-      console.error(err);
+<body>
+  <script>
+    const myPromise = new Promise((resolve, reject) => {
+      // resolve('Andy is cool');
+
+      setTimeout(() => {
+        reject(Error('Err Andy isn\'t cool'));
+      }, 1000);
     });
 
-</script>
+    myPromise
+      .then(data => {
+        console.log(data);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+
+  </script>
 </body>
+
 </html>
