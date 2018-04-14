@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Sets</title>
 </head>
+
 <body>
-<script>
-  const people = new Set();
-  people.add('Wes');
-  people.add('Snickers');
-  people.add('Kait');
+  <script>
+    // an array but unique elements
 
-  for (const person of  people) {
-    console.log(person);
-  }
+    const people = new Set();
+    people.add('Wes');
+    people.add('Snickers');
+    people.add('Kait');
 
-  const students = new Set(['Wes', 'Kara', 'Tony']);
+    for (const person of people) {
+      console.log(person);
+    }
 
-  const dogs = ['Snickers', 'Sunny'];
-  const dogSet = new Set(dogs);
+    const students = new Set(['Wes', 'Kara', 'Tony']);
 
-</script>
+    const dogs = ['Snickers', 'Sunny'];
+    const dogSet = new Set(dogs);
+
+  </script>
 </body>
+
 </html>
